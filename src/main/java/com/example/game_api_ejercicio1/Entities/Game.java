@@ -13,6 +13,7 @@ import lombok.*;
 public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO )
+    
     private Long id;
     private String nombre;
 
