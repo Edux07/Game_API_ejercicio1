@@ -31,5 +31,13 @@ public class GameServiceImplementation implements GameService {
         return this.gameRepository.save(gameRequest);
     }
 
+    @Override
+    public Game deleteGame(String id) {
+        return this.gameRepository.findById(Long.valueOf(id)).map(game -> {
+            this.gameRepository.delete(game);
+            return game;
+        }).orElseThrow(() -> new GameException(HttpStatus.NOT_FOUND, "Game not found"));
+    }
+
 
 }

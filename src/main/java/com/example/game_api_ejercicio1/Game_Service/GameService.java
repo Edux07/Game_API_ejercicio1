@@ -8,4 +8,7 @@ public interface GameService {
     Game getGameById(String id);
 
     Game updateGame(Game gameRequest);
+
+
+    Game deleteGame(String id);
 }

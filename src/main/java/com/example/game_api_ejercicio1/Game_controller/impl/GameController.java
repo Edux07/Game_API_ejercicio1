@@ -29,6 +29,10 @@ public class GameController implements GameAPI {
     public ResponseEntity<Game> UpdateGame(@RequestBody Game game) {
         return ResponseEntity.ok(this.gameService.updateGame(game));
     }
+    @Override
+    public ResponseEntity<Game> DeleteGame(String id) {
+        return ResponseEntity.ok(this.gameService.deleteGame(id));
+    }
 
 
 

@@ -14,4 +14,6 @@ public interface GameAPI {
 
     @PutMapping
     ResponseEntity<Game> UpdateGame(@RequestBody Game game);
+    @DeleteMapping
+    ResponseEntity<Game> DeleteGame(@PathVariable String id);
 }
