@@ -11,4 +11,7 @@ public interface GameAPI {
     ResponseEntity<Game> Savegame(@RequestBody Game game);
     @GetMapping
     ResponseEntity<Game> GetgameByiD(@PathVariable String id);
+
+    @PutMapping
+    ResponseEntity<Game> UpdateGame(@RequestBody Game game);
 }

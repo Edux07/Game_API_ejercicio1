@@ -25,6 +25,11 @@ public class GameController implements GameAPI {
     public ResponseEntity<Game> GetgameByiD(String id) {
         return ResponseEntity.ok(this.gameService.getGameById(id));
     }
+    @Override
+    public ResponseEntity<Game> UpdateGame(@RequestBody Game game) {
+        return ResponseEntity.ok(this.gameService.updateGame(game));
+    }
+
 
 
 }
